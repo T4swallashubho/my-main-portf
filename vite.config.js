@@ -5,5 +5,8 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ["**/*.md"],
-  build: { watch: "https://rollupjs.org/configuration-options/#watch" },
+  build: {
+    watch: "https://rollupjs.org/configuration-options/#watch",
+    rollupOptions: { external: ["@pity/vite-plugin-react-markdown"] },
+  },
 });

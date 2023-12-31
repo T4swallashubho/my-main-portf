@@ -7,6 +7,5 @@ export default defineConfig({
   assetsInclude: ["**/*.md"],
   build: {
     watch: "https://rollupjs.org/configuration-options/#watch",
-    rollupOptions: { external: ["@pity/vite-plugin-react-markdown"] },
   },
 });

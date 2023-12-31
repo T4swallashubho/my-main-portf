@@ -5,4 +5,5 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ["**/*.md"],
+  build: { watch: "https://rollupjs.org/configuration-options/#watch" },
 });

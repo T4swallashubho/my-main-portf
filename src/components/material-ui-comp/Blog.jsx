@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
@@ -53,8 +53,6 @@ const featuredPosts = [
   },
 ];
 
-const posts = [post1, post2, post3];
-
 const sidebar = {
   title: "About",
   description:
@@ -79,6 +77,8 @@ const sidebar = {
   ],
 };
 
+const posts = [post1, post2, post3];
+
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
@@ -92,7 +92,7 @@ export default function Blog() {
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
             {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
+              <FeaturedPost post={post} key={post.title} />
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>

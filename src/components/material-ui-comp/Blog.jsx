@@ -12,9 +12,7 @@ import FeaturedPost from "./FeaturedPost";
 import Header from "./Header";
 import Main from "./Main";
 import Sidebar from "./Sidebar";
-import post1 from "./blog-post.1.md";
-import post2 from "./blog-post.2.md";
-import post3 from "./blog-post.3.md";
+
 
 const sections = [
   { title: "Technology", url: "#" },
@@ -77,7 +75,6 @@ const sidebar = {
   ],
 };
 
-const posts = [post1, post2, post3];
 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
@@ -96,7 +93,7 @@ export default function Blog() {
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
+            <Main title="From the firehose"  />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}

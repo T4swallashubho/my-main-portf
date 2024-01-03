@@ -8,9 +8,9 @@ import Markdown from "./Markdown";
 import useFetch from "./customHooks/useFetch";
 
 function Main(props) {
-  const { posts, title } = props;
+  const { title } = props;
 
-  const [posts1] = useFetch(posts);
+  const [posts1] = useFetch();
 
   return (
     <Grid
@@ -37,7 +37,8 @@ function Main(props) {
 }
 
 Main.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  // these are array of strings which is shown as required in the props.
+  //posts: PropTypes.arrayOf(PropTypes.string).isRequired,
   title: PropTypes.string.isRequired,
 };
 
